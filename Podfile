@@ -7,6 +7,7 @@ target 'InstagramClone' do
 
   # Pods for InstagramClone
   pod 'Parse'
+  pod 'UITextView+Placeholder'
 
   target 'InstagramCloneTests' do
     inherit! :search_paths
