@@ -111,6 +111,7 @@
                  }
                  else{
                      NSLog(@"Successfully posted with caption: %@", self.caption.text);
+                     [self.delegate didPost];
                  }
             } ];
     [self returnHome];
