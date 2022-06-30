@@ -59,14 +59,15 @@ GIF created with [Kap](https://getkap.co/).
 List an 3rd party libraries, icons, graphics, or other assets you used in your app.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
-
+- [DateTools](https://github.com/MatthewYork/DateTools) - date formatting
+- [Parse](https://cocoapods.org/pods/Parse) - Parse API
 ## Notes
 
 Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Airei Fukuzawa]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
