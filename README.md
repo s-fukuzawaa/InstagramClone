@@ -48,6 +48,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 ![Kapture 2022-06-30 at 15 04 37](https://user-images.githubusercontent.com/31524675/176787598-2b833421-1806-4c2b-b7f6-ada7848fab7f.gif)
+![Kapture 2022-06-30 at 15 17 47](https://user-images.githubusercontent.com/31524675/176788145-c28ff503-5cbd-4b2e-a3aa-5667f6557cfa.gif)
 ![Kapture 2022-06-30 at 15 04 37](https://user-images.githubusercontent.com/31524675/176787262-4a6ad90a-61e7-47ad-87e6-d410979339ca.gif)
 
 
