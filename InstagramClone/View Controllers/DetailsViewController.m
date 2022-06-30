@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *captionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) NSDate* date;
 @end
 
@@ -20,20 +22,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    // Set caption
-    self.captionLabel.text = self.post[@"caption"];
     // Set Date
     self.date = self.post.createdAt;
     [self formatDate];
     
     // Set image
-    PFFileObject *file = self.post[@"image"];
+    PFFileObject *file = self.post.image;
     [file getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
                 if (!error) {
                     UIImage *image = [UIImage imageWithData:imageData];  // Here is your image. Put it in a UIImageView or whatever
                     [self.postImage setImage:image];
                 }
             }];
+    
+    // Set profile image
+    PFUser *user = [PFUser currentUser];
+    if(user[@"profileImage"]){
+        PFFileObject *file = user[@"profileImage"];
+        [file getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error) {
+                    if (!error) {
+                        UIImage *image = [UIImage imageWithData:imageData];  // Here is your image. Put it in a UIImageView or whatever
+                        [self.profileImage setImage:image];
+                    }
+                }];
+    }
+    
+    self.usernameLabel.text = [@"@" stringByAppendingString:user[@"username"]];
+    self.profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2;
+    self.profileImage.layer.masksToBounds = YES;
+    // Set caption
+    self.captionLabel.text = [user.username stringByAppendingString: @": "];
+    self.captionLabel.text = [self.captionLabel.text stringByAppendingString:self.post.caption];
     
 }
 - (void) formatDate {

@@ -13,6 +13,8 @@
 		AF60C044286A6B300033DCB0 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60C043286A6B300033DCB0 /* Post.m */; };
 		AF60C047286ADFA50033DCB0 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60C046286ADFA50033DCB0 /* FeedCell.m */; };
 		AF60C04A286B6C130033DCB0 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60C049286B6C130033DCB0 /* DetailsViewController.m */; };
+		AF60C050286BFACC0033DCB0 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60C04F286BFACC0033DCB0 /* UserViewController.m */; };
+		AF60C057286CB7210033DCB0 /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF60C056286CB7210033DCB0 /* GridViewCell.m */; };
 		AFBB1512286A136C00AAE194 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1511286A136C00AAE194 /* AppDelegate.m */; };
 		AFBB1515286A136C00AAE194 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB1514286A136C00AAE194 /* SceneDelegate.m */; };
 		AFBB151B286A136C00AAE194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFBB1519286A136C00AAE194 /* Main.storyboard */; };
@@ -60,6 +62,10 @@
 		AF60C046286ADFA50033DCB0 /* FeedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		AF60C048286B6C130033DCB0 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		AF60C049286B6C130033DCB0 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		AF60C04E286BFACC0033DCB0 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		AF60C04F286BFACC0033DCB0 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		AF60C055286CB7210033DCB0 /* GridViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewCell.h; sourceTree = "<group>"; };
+		AF60C056286CB7210033DCB0 /* GridViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewCell.m; sourceTree = "<group>"; };
 		AFBB150D286A136C00AAE194 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBB1510286A136C00AAE194 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFBB1511286A136C00AAE194 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +142,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		AF60C051286CB6D30033DCB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF60C045286ADFA50033DCB0 /* FeedCell.h */,
+				AF60C046286ADFA50033DCB0 /* FeedCell.m */,
+				AF60C055286CB7210033DCB0 /* GridViewCell.h */,
+				AF60C056286CB7210033DCB0 /* GridViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AFBB1504286A136C00AAE194 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +178,7 @@
 		AFBB150F286A136C00AAE194 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				AF60C051286CB6D30033DCB0 /* Views */,
 				AF60C041286A6B0F0033DCB0 /* Models */,
 				AFBB1598286A4B9000AAE194 /* View Controllers */,
 				AFBB1510286A136C00AAE194 /* AppDelegate.h */,
@@ -168,8 +186,6 @@
 				AFBB1513286A136C00AAE194 /* SceneDelegate.h */,
 				AFBB1514286A136C00AAE194 /* SceneDelegate.m */,
 				AFBB1519286A136C00AAE194 /* Main.storyboard */,
-				AF60C045286ADFA50033DCB0 /* FeedCell.h */,
-				AF60C046286ADFA50033DCB0 /* FeedCell.m */,
 				AFBB151C286A136D00AAE194 /* Assets.xcassets */,
 				AFBB151E286A136D00AAE194 /* LaunchScreen.storyboard */,
 				AFBB1521286A136D00AAE194 /* Info.plist */,
@@ -203,6 +219,8 @@
 				AFBB1592286A478A00AAE194 /* HomeViewController.h */,
 				AFBB1593286A478A00AAE194 /* HomeViewController.m */,
 				AF60C048286B6C130033DCB0 /* DetailsViewController.h */,
+				AF60C04E286BFACC0033DCB0 /* UserViewController.h */,
+				AF60C04F286BFACC0033DCB0 /* UserViewController.m */,
 				AF60C049286B6C130033DCB0 /* DetailsViewController.m */,
 				AFBB1599286A4D7F00AAE194 /* ProfileViewController.h */,
 				AFBB159A286A4D7F00AAE194 /* ProfileViewController.m */,
@@ -467,9 +485,11 @@
 				AFBB1523286A136D00AAE194 /* main.m in Sources */,
 				AFBB1597286A498300AAE194 /* ComposeViewController.m in Sources */,
 				AF60C044286A6B300033DCB0 /* Post.m in Sources */,
+				AF60C050286BFACC0033DCB0 /* UserViewController.m in Sources */,
 				AFBB159B286A4D7F00AAE194 /* ProfileViewController.m in Sources */,
 				AFBB1594286A478A00AAE194 /* HomeViewController.m in Sources */,
 				AFBB1515286A136C00AAE194 /* SceneDelegate.m in Sources */,
+				AF60C057286CB7210033DCB0 /* GridViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

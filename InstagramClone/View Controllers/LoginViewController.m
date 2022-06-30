@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.pwField.delegate = self;
+    self.usernameField.delegate = self;
     // Do any additional setup after loading the view.
 }
 - (IBAction)loginButton:(id)sender {
@@ -63,6 +65,19 @@
     
     
 }
+
+- (IBAction)didTap:(id)sender {
+    [self.view endEditing:YES];
+}
+
+
+
+//- (void)textFieldDidEndEditing:(UITextField *)textField
+//{
+//    NSLog(@"end editing");
+////    activeField = nil;
+//}
+
 - (IBAction)registerButton:(id)sender {
     
     // initialize a user object
